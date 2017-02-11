@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/united.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<script src="site_libs/htmlwidgets-0.8/htmlwidgets.js"></script>
+<script src="site_libs/datatables-binding-0.2/datatables.js"></script>
+<link href="site_libs/dt-core-1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.10.12/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.10.12/js/jquery.dataTables.min.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">zamstat.com</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Ratings</a>
+</li>
+<li>
+  <a href="predict.html">Predictions</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="contact.html">Contact</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><br /> <br /> predicted college basketball scores <br /> <br /> <br /> <br /> <div id="htmlwidget-eb9255bd86d8f7108445" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-eb9255bd86d8f7108445">{"x":{"filter":"none","data":[["2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11","2017-02-11"],["Villanova","Gonzaga","Kansas State","Texas AM","Kansas","Kentucky","Miami Florida","Clemson","TCU","Oregon","Butler","Creighton","Florida State","California","Oklahoma","South Carolina","Texas","Marquette","Houston","Syracuse","NC State","Georgia","Minnesota","Ohio State","Charlotte U","Arkansas","Bradley","Seton Hall","Iowa","Davidson","Washington","Vanderbilt","NC Wilmington","Auburn","Connecticut","Mercer","Louisiana Tech","Richmond","Belmont","Penn State","Air Force","BYU","Tenn Chattanooga","Youngstown State","St. Bonaventure","Columbia","Stanford","Coll Of Charleston","Boston College","Arkansas State","Rice","Fresno State","Massachusetts","Rio Grande","New Mexico State","Samford","NC Asheville","Nebraska Omaha","Marshall","Weber State","Evansville","Wyoming","Kennesaw State","Old Dominion","Georgia State","Gardner Webb","Harvard","South Carolina St","Troy","Buffalo","Fordham","Wisc Milwaukee","South Dakota St","Hofstra","Lipscomb","NC Greensboro","Towson","Kent State","Georgia Southern","Denver","Lafayette","Siena","Cal Irvine","Santa Clara","Idaho","Drake","Loyola Maryland","Tennessee State","Wisc Green Bay","Northern Illinois","San Jose State","Montana","Portland","Morehead State","East Carolina","Central Michigan","Eastern Washington","Arkansas Little Rock","Oral Roberts","Incarnate Word","New Orleans","Tennessee Martin","USC-Upstate","Austin Peay","Quinnipiac","Charleston Southern","Mt St Marys","Utah Valley","Texas Southern","Cal Riverside","South Alabama","Cal Santa Barbara","Cleveland State","Radford","American","Delaware","Long Beach State","Lamar","SE Missouri State","Southern Miss","Duquesne","Texas AM CC","Montana State","Wagner","Seattle U","Fairleigh-Dickinson","Dartmouth","NJIT","St. Francis NY","Pepperdine","The Citadel","Northwestern State","Campbell","North Texas","Nicholls State","Alcorn State","Prairie View AM","Central Connecticut","MD Eastern Shore","Southern","Idaho State","Howard","Delaware State","Alabama AM","Bethune Cookman","Florida AM"],["at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at","at"],["Xavier","Saint Marys CA","West Virginia","Florida","Texas Tech","Alabama","Louisville","Duke","Baylor","USC","Providence","Depaul","Notre Dame","Arizona","Iowa State","Mississippi State","Oklahoma State","Georgetown","Tulsa","Pittsburgh","Wake Forest","Tennessee","Rutgers","Maryland","Middle Tenn St","LSU","Illinois State","St. Johns","Michigan State","Va Commonwealth","Utah","Missouri","Elon","Mississippi","Central Florida","East Tenn State","Texas San Antonio","La Salle","Tennessee Tech","Illinois","Boise State","San Francisco","Wofford","Valparaiso","George Washington","Princeton","Arizona State","William Mary","Georgia Tech","UT Arlington","Florida Atlantic","Colorado State","St. Josephs","CS Bakersfield","Grand Canyon","Furman","Longwood","IPFW","Western Kentucky","Portland State","Southern Illinois","Utah State","Fla Gulf Coast","UAB","Appalachian State","Winthrop","Yale","NC Central","UL - Lafayette","Bowling Green","George Mason","Northern Kentucky","South Dakota","Northeastern","Stetson","Western Carolina","Drexel","Toledo","Coastal Carolina","North Dakota State","Navy","Marist","Hawaii","Pacific","North Dakota","Indiana State","Boston U","Jacksonville State","Wright State","Western Michigan","UNLV","Northern Arizona","Loyola Marymount","Eastern Kentucky","South Florida","Miami Ohio","No. Colorado","Texas State","IUPUI","Sam Houston St","SE Louisiana","SIU Edwardsville","North Florida","Murray State","Rider","Liberty","St. Francis PA","Chicago State","Grambling","UC Davis","UL - Monroe","CS Northridge","Illinois Chicago","High Point","Army","James Madison","CS Fullerton","Houston Baptist","Eastern Illinois","UTEP","Saint Louis","McNeese State","Southern Utah","Robert Morris","UMKC","LIU-Brooklyn","Brown","Jacksonville","Bryant","San Diego","VMI","Abilene Christian","Presbyterian","Florida Intl","Central Arkansas","Miss Valley State","Jackson State","Sacred Heart","Norfolk State","Ark Pine Bluff","Sacramento State","Hampton","Morgan State","Alabama State","Coppin State","NC AT"],["  4.6","  4.9"," -9.5","-14.6","  3.9","  6.9"," -9.8","-10.9"," -8.2","  4.8","  4.0"," 13.5"," -3.4"," -6.3","-10.9","  6.6"," -8.7","  0.6","  6.5","  0.1","-11.3"," -2.2","  7.0"," -4.4","-14.3","  5.4","-16.5","  0.6"," -7.2"," -6.6","-10.7","  6.9","  5.4"," -1.8"," -5.9"," -9.0","  7.7"," -4.3"," 11.8"," -1.8","-11.1"," -4.0","  1.3","-16.1","  2.9","-12.1","  1.8"," -0.3"," -6.0"," -3.5","  9.3"," -3.7"," -0.4","-13.4","  0.9"," -5.8"," 17.2"," -8.2","  3.5","  4.1"," -2.4"," -1.6","-10.7"," -3.5","  3.1"," -5.0"," -3.2","-17.2"," -4.6","  5.0"," -7.4","-10.1"," -8.3"," -7.5","  8.8","  7.2","  1.5"," -3.5"," -1.1"," -1.2","-13.0","  7.2","  2.2","  0.6"," -5.5"," -5.0"," -5.5","  4.0"," -2.6"," -3.1"," -1.8","  8.8"," -4.6","  3.6","  3.5","  3.5","  1.1"," -3.3"," -4.5","-10.0"," -2.2","  6.7","  0.5"," -8.9"," -4.3"," -7.3"," -0.2"," 10.7","  6.0"," -7.9"," -2.3"," -8.7"," -4.0"," -4.4"," -5.9"," -7.5","  0.9"," -2.5"," -3.1","-10.2","  0.3","  2.3","  6.5","  1.3"," -2.8"," -1.9"," -4.5"," -0.1","-10.2"," -1.9","  0.7"," -3.2","  7.8"," -3.8"," -3.3","  2.7","  0.3"," -7.4"," -1.9","  2.9"," -2.9"," -6.3"," -8.2","-12.7"," -1.4","  0.4"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>date\u003c/th>\n      <th>team\u003c/th>\n      <th>location\u003c/th>\n      <th>opponent\u003c/th>\n      <th>projected.outcome\u003c/th>\n    \u003c/tr>\n  \u003c/thead>\n\u003c/table>","options":{"columnDefs":[{"className":"dt-center","targets":[0,1,2,3,4]}],"pageLength":10,"lengthMenu":[10,20,50,100,351],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>[1] “Last updated: 11 February 2017 (02:01)”</p>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
