@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/united.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<script src="site_libs/htmlwidgets-0.8/htmlwidgets.js"></script>
+<script src="site_libs/datatables-binding-0.2/datatables.js"></script>
+<link href="site_libs/dt-core-1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.10.12/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.10.12/js/jquery.dataTables.min.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">zamstat.com</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Ratings</a>
+</li>
+<li>
+  <a href="predict.html">Predictions</a>
+</li>
+<li>
+  <a href="apparel.html">Apparel</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="contact.html">Contact</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><br /> <br /> college basketball apparel affiliations <br /> <br /></p>
+<p>This list is a best attempt to identify the apparel affiliation for al 351 D1 basketball programs for the 2017-18 season. If you notice any mistakes, please contact me. <br /> <br /> <div id="htmlwidget-9a2f3b0cf69062d8c750" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9a2f3b0cf69062d8c750">{"x":{"filter":"none","data":[["Abilene Christian","Air Force","Akron","Alabama","Alabama AM","Alabama State","Albany NY","Alcorn State","American","Appalachian State","Arizona","Arizona State","Ark Pine Bluff","Arkansas","Arkansas Little Rock","Arkansas State","Army","Auburn","Austin Peay","Ball State","Baylor","Belmont","Bethune Cookman","Binghamton","Boise State","Boston College","Boston U","Bowling Green","Bradley","Brown","Bryant","Bucknell","Buffalo","Butler","BYU","Cal Irvine","Cal Poly SLO","Cal Riverside","Cal Santa Barbara","California","Campbell","Canisius","Central Arkansas","Central Connecticut","Central Florida","Central Michigan","Charleston Southern","Charlotte U","Chicago State","Cincinnati","Clemson","Cleveland State","Coastal Carolina","Colgate","Coll Of Charleston","Colorado","Colorado State","Columbia","Connecticut","Coppin State","Cornell","Creighton","CS Bakersfield","CS Fullerton","CS Northridge","Dartmouth","Davidson","Dayton","Delaware","Delaware State","Denver","Depaul","Detroit","Drake","Drexel","Duke","Duquesne","East Carolina","East Tenn State","Eastern Illinois","Eastern Kentucky","Eastern Michigan","Eastern Washington","Elon","Evansville","Fairfield","Fairleigh-Dickinson","Fla Gulf Coast","Florida","Florida AM","Florida Atlantic","Florida Intl","Florida State","Fordham","Fresno State","Furman","Gardner Webb","George Mason","George Washington","Georgetown","Georgia","Georgia Southern","Georgia State","Georgia Tech","Gonzaga","Grambling","Grand Canyon","Hampton","Hartford","Harvard","Hawaii","High Point","Hofstra","Holy Cross","Houston","Houston Baptist","Howard","Idaho","Idaho State","Illinois","Illinois Chicago","Illinois State","Incarnate Word","Indiana","Indiana State","Iona","Iowa","Iowa State","IPFW","IUPUI","Jackson State","Jacksonville","Jacksonville State","James Madison","Kansas","Kansas State","Kennesaw State","Kent State","Kentucky","La Salle","Lafayette","Lamar","Lehigh","Liberty","Lipscomb","LIU-Brooklyn","Long Beach State","Longwood","Louisiana Tech","Louisville","Loyola Chicago","Loyola Maryland","Loyola Marymount","LSU","Maine","Manhattan","Marist","Marquette","Marshall","Maryland","Massachusetts","McNeese State","MD Eastern Shore","Memphis","Mercer","Miami Florida","Miami Ohio","Michigan","Michigan State","Middle Tenn St","Minnesota","Miss Valley State","Mississippi","Mississippi State","Missouri","Missouri State","Monmouth","Montana","Montana State","Morehead State","Morgan State","Mt St Marys","Murray State","Navy","NC Asheville","NC AT","NC Central","NC Greensboro","NC State","NC Wilmington","Nebraska","Nebraska Omaha","Nevada","New Hampshire","New Mexico","New Mexico State","New Orleans","Niagara","Nicholls State","NJIT","No. Colorado","Norfolk State","North Carolina","North Dakota","North Dakota State","North Florida","North Texas","Northeastern","Northern Arizona","Northern Illinois","Northern Iowa","Northern Kentucky","Northwestern","Northwestern State","Notre Dame","Oakland","Ohio","Ohio State","Oklahoma","Oklahoma State","Old Dominion","Oral Roberts","Oregon","Oregon State","Pacific","Penn State","Pennsylvania","Pepperdine","Pittsburgh","Portland","Portland State","Prairie View AM","Presbyterian","Princeton","Providence","Purdue","Quinnipiac","Radford","Rhode Island","Rice","Richmond","Rider","Robert Morris","Rutgers","Sacramento State","Sacred Heart","Saint Louis","Saint Marys CA","Sam Houston St","Samford","San Diego","San Diego State","San Francisco","San Jose State","Santa Clara","Savannah State","SE Louisiana","SE Missouri State","Seattle U","Seton Hall","Siena","SIU Edwardsville","SMU","South Alabama","South Carolina","South Carolina St","South Dakota","South Dakota St","South Florida","Southern","Southern Illinois","Southern Miss","Southern Utah","St. Bonaventure","St. Francis NY","St. Francis PA","St. Johns","St. Josephs","St. Peter's","Stanford","Stephen F. Austin","Stetson","Stony Brook","Syracuse","TCU","Temple","Tenn Chattanooga","Tennessee","Tennessee Martin","Tennessee State","Tennessee Tech","Texas","Texas AM","Texas AM CC","Texas San Antonio","Texas Southern","Texas State","Texas Tech","The Citadel","Toledo","Towson","Troy","Tulane","Tulsa","UAB","UC Davis","UCLA","UL - Lafayette","UL - Monroe","UMass Lowell","UMBC","UMKC","UNLV","USC","USC-Upstate","UT Arlington","Utah","Utah State","Utah Valley","UTEP","UTRGV","Va Commonwealth","Valparaiso","Vanderbilt","Vermont","Villanova","Virginia","Virginia Tech","VMI","Wagner","Wake Forest","Washington","Washington State","Weber State","West Virginia","Western Carolina","Western Illinois","Western Kentucky","Western Michigan","Wichita State","William Mary","Winthrop","Wisc Green Bay","Wisc Milwaukee","Wisconsin","Wofford","Wright State","Wyoming","Xavier","Yale","Youngstown State"],["Nike","Nike","adidas","Nike","Russell Athletic","Russell Athletic","Nike","Russell Athletic","Nike","Nike","Nike","adidas","Russell Athletic","Nike","Nike","adidas","Nike","Under Armour","Russell Athletic","Nike","Nike","Nike","Nike","Nike","Nike","Under Armour","Nike","Nike","adidas","adidas","adidas","adidas","Nike","Nike","Nike","adidas","Nike","adidas","Nike","Nike","Under Armour","Nike","adidas","Nike","Nike","adidas","Nike","Nike","Nike","Under Armour","Nike","Nike","Under Armour","Under Armour","Nike","Nike","Under Armour","Nike","Nike","Nike","Nike","Nike","adidas","Nike","Under Armour","Nike","Nike","Nike","adidas","Nike","adidas","Nike","adidas","adidas","Nike","Nike","adidas","adidas","Nike","adidas","Under Armour","adidas","adidas","Under Armour","Nike","Nike","Nike","Nike","Nike","Nike","adidas","adidas","Nike","Nike","Nike","Nike","Under Armour","adidas","Nike","Jordan","Nike","adidas","Under Armour","Russell Athletic","Nike","Russell Athletic","Nike","Russell Athletic","Under Armour","Nike","Under Armour","adidas","Nike","adidas","Nike","Nike","Russell Athletic","Nike","adidas","Nike","adidas","Nike","adidas","adidas","Nike","adidas","Nike","Nike","Nike","Nike","Russell Athletic","Nike","adidas","Nike","adidas","Nike","adidas","Under Armour","Nike","Under Armour","Nike","Nike","Nike","Nike","Nike","Nike","Nike","adidas","adidas","adidas","Nike","Under Armour","Nike","Nike","adidas","Under Armour","Nike","Jordan","Nike","Under Armour","adidas","Nike","Nike","Nike","adidas","adidas","adidas","Jordan","Nike","Nike","Nike","Russell Athletic","Nike","adidas","Nike","adidas","Nike","Nike","Under Armour","Under Armour","adidas","Under Armour","Nike","Under Armour","adidas","Nike","Nike","Nike","adidas","adidas","adidas","adidas","Nike","Nike","Nike","Under Armour","Under Armour","Nike","adidas","adidas","Under Armour","Russell Athletic","Jordan","Nike","Nike","Nike","Under Armour","Nike","adidas","adidas","Nike","adidas","Under Armour","adidas","Under Armour","Jordan","adidas","Nike","Nike","Nike","Under Armour","Nike","Nike","Nike","Nike","Nike","Nike","Nike","Nike","Nike","Nike","Russell Athletic","adidas","Nike","Nike","Nike","adidas","Nike","adidas","adidas","Nike","adidas","Under Armour","adidas","adidas","adidas","Nike","Under Armour","Nike","Nike","Nike","Nike","Nike","adidas","Nike","Russell Athletic","adidas","Nike","Nike","Under Armour","Under Armour","adidas","Nike","Nike","Under Armour","Russell Athletic","adidas","Under Armour","Under Armour","Russell Athletic","Under Armour","Russell Athletic","adidas","adidas","Nike","Under Armour","Under Armour","Nike","Nike","Nike","Under Armour","Nike","Nike","Nike","Nike","Under Armour","adidas","Nike","Under Armour","adidas","Nike","Nike","adidas","adidas","adidas","Russell Athletic","adidas","Under Armour","adidas","Nike","Under Armour","adidas","Nike","adidas","Under Armour","adidas","Under Armour","adidas","adidas","Under Armour","Under Armour","adidas","Nike","Nike","Nike","adidas","Under Armour","Nike","adidas","Nike","adidas","Nike","Nike","Nike","adidas","Nike","Nike","Nike","Under Armour","Under Armour","Nike","Nike","Nike","adidas","Nike","adidas","adidas","Nike","adidas","Under Armour","Nike","adidas","adidas","adidas","Under Armour","adidas","Nike","Nike","Nike","Under Armour","Nike"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>school\u003c/th>\n      <th>Company\u003c/th>\n    \u003c/tr>\n  \u003c/thead>\n\u003c/table>","options":{"columnDefs":[{"className":"dt-left","targets":[0,1]}],"pageLength":351,"lengthMenu":[10,20,50,100,351],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>[1] “Last updated: 28 September 2017 (16:15)” <br /> <br /> <br /></p>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
