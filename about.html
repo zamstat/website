@@ -4,14 +4,14 @@
 
 <head>
 
-<meta charset="utf-8">
+<meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 
 
 
 
-<title></title>
+<title>about.utf8</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,8 +20,8 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -30,10 +30,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlightingOnLoad(); }, 0);
+  }
 }
 </script>
 
@@ -209,9 +211,10 @@ $(document).ready(function () {
 <p><br /> <br /></p>
 <p>Thank you for visiting the site! Here are a few tidbits I thought that you (i.e., close friend or random person who stumbled on this site) might find interesting!</p>
 <p><br /></p>
-<div id="ratings-primer" class="section level2">
+<section id="ratings-primer" class="level2">
 <h2>Ratings Primer</h2>
-<p>The main focus of this website, as currently constructed, is to publish relative ratings for all 351 college basketball teams in NCAA D-1.<br />The ratings are determined via an algorithm that I conceptualized and implemented. In addition to accounting for standard metrics (margin of victory, the opponent, and the location of the game), this algorithm also attempts to account for pace of play and team-specific location advantages. I describe it as an EM algorithm that iteratively updates until it reaches a point of stasis.</p>
+<p>The main focus of this website, as currently constructed, is to publish relative ratings for all 351 college basketball teams in NCAA D-1.<br />
+The ratings are determined via an algorithm that I conceptualized and implemented. In addition to accounting for standard metrics (margin of victory, the opponent, and the location of the game), this algorithm also attempts to account for pace of play and team-specific location advantages. I describe it as an EM algorithm that iteratively updates until it reaches a point of stasis.</p>
 <p>In the rating table, I report five values (and five corresponding ranks). The values reported do have interpretations, I promise!</p>
 <ul>
 <li>Quick comparison – just compare teams relatively (e.g., which team has the higher rating, which team has great game-to-game variability).</li>
@@ -223,19 +226,19 @@ $(document).ready(function () {
 <li><p>Advanced comparison – see my ‘Predictions’ tab!</p></li>
 </ul>
 <p><br /></p>
-</div>
-<div id="about-me" class="section level2">
+</section>
+<section id="about-me" class="level2">
 <h2>About Me</h2>
 <p>An avid college basketball fan with a statistical background, I started this project in November 2016 as an homage to the childhood version of myself. That kid always dreamed of coming up with college basketball rankings and I am happy to (finally) oblige. After a few months of tweaking…I am pleased with the intuitiveness behind the metrics included, the reasonableness of the rankings, and its predictive performance and am now ready to share with others!</p>
 <!--I am also really interested to see whether this site can grow organically. As an experiment (at least at first), I will try to not directly publicize this to my personal connections. 
 %Rather, I will try to reach broader audiences via social media.  So, if you are reading this, spread the word and help the site grow!
 -->
 <p><br /></p>
-</div>
-<div id="technical-details" class="section level2">
+</section>
+<section id="technical-details" class="level2">
 <h2>Technical Details</h2>
 <p>The entire project - data manipulation, data analysis, and website development - is being run using R (statistical software).</p>
-</div>
+</section>
 
 
 
@@ -260,7 +263,7 @@ $(document).ready(function () {
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>
