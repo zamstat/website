@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>predicted college basketball scores</title>
+
+<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/united.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-0.9/htmlwidgets.js"></script>
+<script src="site_libs/datatables-binding-0.2/datatables.js"></script>
+<link href="site_libs/dt-core-1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.10.12/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.10.12/js/jquery.dataTables.min.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlightingOnLoad(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">zamstat.com</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Ratings</a>
+</li>
+<li>
+  <a href="predict.html">Predictions</a>
+</li>
+<li>
+  <a href="apparel.html">Apparel</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="contact.html">Contact</a>
+</li>
+<li>
+  <a href="schedulinganalysis.html">Analysis: Scheduling</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">predicted college basketball scores</h1>
+
+</div>
+
+
+<p><br /> <br /> <br /></p>
+<p><div id="htmlwidget-e5914c42851a68f971f1" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e5914c42851a68f971f1">{"x":{"filter":"none","data":[["2018-03-13","2018-03-13","2018-03-14","2018-03-14","2018-03-15","2018-03-15","2018-03-15","2018-03-15","2018-03-15","2018-03-15","2018-03-15","2018-03-15","2018-03-15","2018-03-15","2018-03-15","2018-03-15","2018-03-15","2018-03-15","2018-03-16","2018-03-16","2018-03-16","2018-03-16","2018-03-16","2018-03-16","2018-03-16","2018-03-16","2018-03-16","2018-03-16","2018-03-16","2018-03-16","2018-03-16","2018-03-16","2018-03-13","2018-03-13","2018-03-13","2018-03-13","2018-03-13","2018-03-13","2018-03-13","2018-03-13","2018-03-13","2018-03-13","2018-03-14","2018-03-14","2018-03-14","2018-03-14","2018-03-14","2018-03-14","2018-03-14","2018-03-14","2018-03-14","2018-03-14","2018-03-14","2018-03-14","2018-03-14","2018-03-14","2018-03-14","2018-03-14","2018-03-14","2018-03-15"],["ucla","radford","arizona state","texas southern","duke","kansas","gonzaga","michigan","texas tech","tennessee","arizona","kentucky","ohio state","houston","seton hall","loyola chicago","rhode island","virginia tech","virginia","purdue","michigan state","north carolina","cincinnati","west virginia","wichita state","creighton","texas am","auburn","clemson","arkansas","nevada","missouri","USC","BAYLOR","NOTRE DAME","SAINT MARYS CA","LOUISVILLE","WESTERN KENTUCKY","OREGON","MIDDLE TENN ST","OKLAHOMA STATE","UTAH VALLEY","PENN STATE","MARQUETTE","MISSISSIPPI STATE","LSU","SOUTH DAKOTA","UTAH","STANFORD","WASHINGTON","GRAND CANYON","CANISIUS","SAN FRANCISCO","TEXAS SAN ANTONIO","SEATTLE U","EASTERN MICHIGAN","ILLINOIS CHICAGO","CAMPBELL","NEW ORLEANS","AUSTIN PEAY"],["st. bonaventure","liu-brooklyn","syracuse","nc central","iona","pennsylvania","nc greensboro","montana","stephen f. austin","wright state","buffalo","davidson","south dakota st","san diego state","nc state","miami florida","oklahoma","alabama","umbc","cs fullerton","bucknell","lipscomb","georgia state","murray state","marshall","kansas state","providence","coll of charleston","new mexico state","butler","texas","florida state","nc asheville","wagner","hampton","se louisiana","northern kentucky","boston college","rider","vermont","fla gulf coast","eastern washington","temple","harvard","nebraska","ul - lafayette","north texas","uc davis","byu","boise state","mercer","jacksonville state","colgate","lamar","central arkansas","niagara","st. francis pa","miami ohio","utrgv","ul - monroe"],[" 2.26"," 5.85"," 1.01"," 3.60","15.75","14.89","10.62"," 9.84","11.49","12.46"," 7.55"," 1.02"," 5.67"," 2.18"," 1.47"," 1.12"," 0.00"," 1.23","20.70","17.95","14.26","18.20","11.23"," 6.37"," 8.82"," 2.52"," 5.23","10.36"," 3.38"," 0.95"," 0.77"," 0.48","16.13","17.54","19.37","13.68"," 9.45"," 5.71","11.49"," 4.81"," 7.30"," 8.37","11.30","12.68"," 4.59"," 5.19","12.46"," 9.78"," 2.07"," 0.21"," 4.68"," 3.73"," 8.01"," 6.04"," 6.20"," 4.74"," 2.34"," 2.16"," 2.24"," 2.81"],["Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","No"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>date<\/th>\n      <th>favorite<\/th>\n      <th>underdog<\/th>\n      <th>projected.outcome<\/th>\n      <th>NCAAtourney<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-center","targets":[0,1,2,3]}],"pageLength":10,"lengthMenu":[10,20,50,100,351],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>[1] “Last updated: 13 March 2018 (00:22)” <br /> <br /> Note: The home team is indicated using uppercase and away team is indicated using lowercase. If a game is played on a neutral court, both teams are indicated using lowercase. <br /></p>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
